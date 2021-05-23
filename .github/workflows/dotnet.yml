@@ -3,8 +3,12 @@ name: .NET
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    paths:
+      - 'Api/**'
+      
+defaults:
+  run:
+    working-directory: ./Api
 
 jobs:
   build:
